@@ -19,6 +19,7 @@ use App\Http\Livewire\LaravelExamples\UserManagement;
 
 use Illuminate\Http\Request;
 
+use App\Http\Livewire\HomePage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,8 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return redirect('/login');
 });
+
+// Route::get('/', HomePage::class)->name('home');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
