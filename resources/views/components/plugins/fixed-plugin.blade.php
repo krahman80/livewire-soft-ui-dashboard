@@ -55,14 +55,17 @@
                 <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed"
                     onclick="navbarFixed(this)">
             </div>
+            {{--
             <hr class="horizontal dark my-sm-4">
-            <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard-laravel-livewire"
-                target="_blank">Free download</a>
-            <a class="btn btn-outline-dark w-100"
-                href="/documentation/bootstrap/overview/soft-ui-dashboard/index.html" target="blank">View
-                documentation</a>
-            <div class="w-100 text-center">
-                <a class="github-button" href=" https://github.com/creativetimofficial/soft-ui-dashboard-laravel-livewire"
+            <a class="btn bg-gradient-dark w-100"
+                href="https://www.creative-tim.com/product/soft-ui-dashboard-laravel-livewire" target="_blank">Free
+                download</a>
+            <a class="btn btn-outline-dark w-100" href="/documentation/bootstrap/overview/soft-ui-dashboard/index.html"
+                target="blank">View
+                documentation</a> --}}
+            {{-- <div class="w-100 text-center">
+                <a class="github-button"
+                    href=" https://github.com/creativetimofficial/soft-ui-dashboard-laravel-livewire"
                     data-icon="octicon-star" data-size="large" data-show-count="true"
                     aria-label="Star creativetimofficial/soft-ui-dashboard on GitHub">Star</a>
                 <h6 class="mt-3">Thank you for sharing!</h6>
@@ -74,7 +77,7 @@
                     class="btn btn-dark mb-0 me-2" target="_blank">
                     <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
                 </a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
