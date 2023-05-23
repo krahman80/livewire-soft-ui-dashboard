@@ -6,17 +6,17 @@
                     <div class="card card-plain mt-8">
                         <div class="card-header pb-0 text-left bg-transparent">
                             <h3 class="font-weight-bolder text-info text-gradient">{{ __('Welcome back') }}</h3>
-                            <p class="mb-0">{{ __('Create a new acount')}}<br></p>
+                            {{-- <p class="mb-0">{{ __('Create a new acount')}}<br></p>
                             <p class="mb-0">{{__('OR Sign in with these credentials:') }}</p>
                             <p class="mb-0">{{ __('Email ') }}<b>{{ __('admin@softui.com') }}</b></p>
-                            <p class="mb-0">{{ __('Password ') }}<b>{{ __('secret') }}</b></p>
+                            <p class="mb-0">{{ __('Password ') }}<b>{{ __('secret') }}</b></p> --}}
                         </div>
                         <div class="card-body">
                             <form wire:submit.prevent="login" action="#" method="POST" role="form text-left">
                                 <div class="mb-3">
                                     <label for="email">{{ __('Email') }}</label>
                                     <div class="@error('email')border border-danger rounded-3 @enderror">
-                                        <input wire:model="email" id="email" type="email" class="form-control"
+                                        <input wire:model.lazy="email" id="email" type="email" class="form-control"
                                             placeholder="Email" aria-label="Email" aria-describedby="email-addon">
                                     </div>
                                     @error('email') <div class="text-danger">{{ $message }}</div> @enderror
@@ -24,8 +24,8 @@
                                 <div class="mb-3">
                                     <label for="password">{{ __('Password') }}</label>
                                     <div class="@error('password')border border-danger rounded-3 @enderror">
-                                        <input wire:model="password" id="password" type="password" class="form-control"
-                                            placeholder="Password" aria-label="Password"
+                                        <input wire:model.lazy="password" id="password" type="password"
+                                            class="form-control" placeholder="Password" aria-label="Password"
                                             aria-describedby="password-addon">
                                     </div>
                                     @error('password') <div class="text-danger">{{ $message }}</div> @enderror
@@ -53,12 +53,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                {{-- <div class="col-md-6">
                     <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
                         <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
                             style="background-image:url('../assets/img/curved-images/curved6.jpg')"></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

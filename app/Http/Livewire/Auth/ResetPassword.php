@@ -16,7 +16,7 @@ class ResetPassword extends Component
     public $password = '';
     public $passwordConfirmation = '';
 
-    public $showSuccesNotification = false; 
+    public $showSuccesNotification = false;
     public $showFailureNotification = false;
 
     public $showDemoNotification = false;
@@ -26,19 +26,21 @@ class ResetPassword extends Component
     protected $rules = [
         'email' => 'required|email',
         'password' => 'required|min:6|same:passwordConfirmation'
-    ];  
+    ];
 
-    public function mount($id) {
+    public function mount($id)
+    {
         $existingUser = User::find($id);
         $this->urlID = intval($existingUser->id);
     }
 
-    public function resetPassword() {
+    public function resetPassword()
+    {
         $this->validate();
         $existingUser = User::where('email', $this->email)->first();
-        if($existingUser && $existingUser->id == $this->urlID) { 
+        if ($existingUser && $existingUser->id == $this->urlID) {
             $existingUser->update([
-                'password' => Hash::make($this->password) 
+                'password' => Hash::make($this->password)
             ]);
             $this->showSuccesNotification = true;
             $this->showFailureNotification = false;
@@ -49,6 +51,6 @@ class ResetPassword extends Component
 
     public function render()
     {
-        return view('livewire.auth.reset-password')->layout('layouts.base');
+        return view('livewire.auth.reset-password');
     }
 }
