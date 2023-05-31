@@ -18,12 +18,12 @@
         <div class="row mt-6">
             <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                 <div class="card card-plain">
-                    <div class="card-header pb-0 bg-transparent text-left">
-                        <h3 class="font-weight-bolder text-info text-gradient">{{ __('Don\'t have an Account?, Register
-                            Here') }}</h3>
+                    <div class="card-header pb-0 bg-white text-left">
+                        <h3 class="font-weight-bolder">{{ __('Register') }}</h3>
+                        <p class="mb-0">Please fill out the form below to register</p>
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-white">
                         <form wire:submit.prevent="register" action="#" method="POST" role="form text-left">
                             <div class="mb-3">
                                 <label for="name">{{ __('Name') }}</label>
@@ -67,6 +67,8 @@
                             </p>
                         </form>
 
+                    </div>
+                    <div class="card-footer text-center pt-0 px-lg-2 px-1 bg-white">
                     </div>
                 </div>
             </div>

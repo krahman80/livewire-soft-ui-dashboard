@@ -14,10 +14,23 @@
             </nav>
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 d-flex justify-content-end" id="navbar">
                 <div class="ms-md-3 pe-md-3 d-flex align-items-center">
-                    <div class="input-group">
+                    {{-- <div class="input-group">
                         <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
                         <input type="text" class="form-control" placeholder="Type here...">
+                    </div> --}}
+                    {{-- Welcome,&nbsp;<span class="font-weight-bold">{{ auth()->user()->name }}</span> --}}
+
+                    <div class="d-flex px-2 py-1">
+                        <div>
+                            <img src="../../../assets/img/team-2.jpg" width="20px" class="me-3 rounded-circle"
+                                alt="avatar image">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm"><a href="{{ route('profile') }}">{{ auth()->user()->name }}</a>
+                            </h6>
+                        </div>
                     </div>
+
                 </div>
                 <ul class="navbar-nav justify-content-end">
                     <li class="nav-item d-flex align-items-center">
